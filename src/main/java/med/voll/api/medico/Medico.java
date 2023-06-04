@@ -13,7 +13,8 @@ import java.util.Date;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Medico {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private Integer idade;
@@ -23,5 +24,16 @@ public class Medico {
         this.nome = dados.nome();
         this.idade = dados.idade();
         this.data = new Date();
+    }
+
+    public void atualizarInfos(DadosUpdateMedicos dados) {
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if (dados.idade() != null) {
+            this.idade = dados.idade();
+        }
+
+
     }
 }
