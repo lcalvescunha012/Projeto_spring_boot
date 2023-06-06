@@ -1,2 +1,2 @@
-# Projeto_spring_boot
-Primeiro projeto em Spring Boot
+# Projeto Spring Boot
+Este projeto consiste em um projeto de aprendizado de Spring boot.
